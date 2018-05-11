@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+ <head> 
+  <meta charset="utf-8" /> 
+  <title>发现旅行中的朋友</title> 
+<link rel="stylesheet" href="./css/bootstrap.min.css">
+<script src="./js/jquery.min.js"></script>
+<script src="./js/bootstrap.min.js"></script>
+
+<script src="./js/bootstrap-datepicker.js"></script>
+<script src="./js/index.js"></script>
+<script src="./js/nebPay.js"></script>
+<link rel="stylesheet" href="./css/bootstrap-datepicker.css" type="text/css" />
+ </head> 
+ <body style="background:url('./img/bg.jpg');background-size: cover;background-position: center center;"> 
+  <div class="container" > 
+   <div class="row clearfix"> 
+    <div class="col-md-12 column"> 
+<div >
+     <blockquote> 
+      <p><h1><font style="color:yellow"><b>想摆脱一个人的孤单旅行吗？</b></font></h1></p> 
+      <ul>
+<li>
+同一个日期...
+</li>
+<li>
+同一个目的地...
+</li>
+<li>
+发现旅行中的朋友...
+</li>
+</ul>
+     </blockquote> 
+</div>
+<div class="row clearfix">
+<div class="col-md-12 column">
+<div class="panel-group" id="panel-629835">
+<div class="panel panel-default">
+<div class="panel-heading">
+<a class="panel-title collapsed" data-toggle="collapse" data-parent="#panel-629835" href="#panel-element-844387">1. 分享你的旅行信息</a>
+</div>
+<div id="panel-element-844387" class="panel-collapse collapse">
+<div class="panel-body">
+<form role="form"> 
+   <!--
+    <div class="form-group"> 
+         <label for="nasAddress">NAS Address</label>
+         <input type="text" class="form-control" id="nasAddress" /> 
+        </div>
+-->
+        <div class="form-group"> 
+         <label for="travellingCity">旅行城市</label>
+         <input type="text" class="form-control" id="travellingCity" /> 
+        </div>
+<div class="form-group">
+<label for="datepicker">旅行日期</label>
+<br>
+<input type="text" class="form-control" id="datepicker" /> 
+</div> 
+
+        <div class="form-group"> 
+         <label for="phoneNumber">电话</label>
+         <input type="text" class="form-control" id="phoneNumber" /> 
+        </div>
+        <div class="form-group"> 
+         <label for="weChatNumber">微信</label>
+         <input type="text" class="form-control" id="weChatNumber" /> 
+        </div>
+        <div class="form-group"> 
+         <label for="remark">备注</label>
+<textarea class="form-control" rows="3" id="remark"></textarea>
+         
+        </div>
+
+
+
+        <button type="button" class="btn btn-default" id="savebutton">保存</button> 
+       </form> 
+</div>
+</div>
+</div>
+<br>
+<div class="panel panel-default">
+<div class="panel-heading">
+<a class="panel-title" data-toggle="collapse" data-parent="#panel-629835" href="#panel-element-397706">2. 发现朋友</a>
+</div>
+<div id="panel-element-397706" class="panel-collapse in">
+<div class="panel-body">
+<form role="form"> 
+   <!--
+    <div class="form-group"> 
+         <label for="nasAddress">NAS Address</label>
+         <input type="text" class="form-control" id="nasAddress" /> 
+        </div>
+-->
+
+        <div class="form-group"> 
+         <label for="travellingCitySearch">旅行城市</label>
+         <input type="text" class="form-control" id="travellingCitySearch" /> 
+        </div>
+<div class="form-group">
+<label for="datepickerSearch">旅行日期</label>
+<br>
+<input type="text" class="form-control" id="datepickerSearch" /> 
+</div> 
+
+        <button type="button" class="btn btn-default" id="searchbutton">发现</button> 
+       </form> 
+        
+
+      <div class="panel-body">
+               
+      </div> 
+      <div class="panel-footer">
+  
+  <div class="row clearfix" >
+<div class="col-md-12 column">
+<span id="recordscount">0条记录</span>
+<table class="table table-condensed table-bordered">
+<thead>
+<tr>
+<th>
+编号
+</th>
+<th>
+旅行城市
+</th>
+<th>
+旅行日期
+</th>
+<th>
+电话
+</th>
+<th>
+微信
+</th>
+<th>
+备注
+</th>
+</tr>
+</thead>
+<tbody id="searchresult">
+<!--
+<tr class="warning">
+<td >
+1
+</td>
+<td>
+TB - Monthly
+</td>
+<td>
+01/04/2012
+</td>
+<td>
+Default
+</td>
+</tr>
+<tr class="info">
+<td>
+1
+</td>
+<td>
+TB - Monthly
+</td>
+<td>
+01/04/2012
+</td>
+<td>
+Approved
+</td>
+</tr>
+<tr class="warning">
+<td>
+2
+</td>
+<td>
+TB - Monthly
+</td>
+<td>
+02/04/2012
+</td>
+<td>
+Declined
+</td>
+</tr>
+<tr class="info">
+<td>
+3
+</td>
+<td>
+TB - Monthly
+</td>
+<td>
+03/04/2012
+</td>
+<td>
+Pending
+</td>
+</tr>
+<tr class="warning">
+<td>
+4
+</td>
+<td>
+TB - Monthly
+</td>
+<td>
+04/04/2012
+</td>
+<td>
+Call in to confirm
+</td>
+</tr>
+-->
+</tbody>
+</table>
+</div>
+</div>
+      </div> 
+     
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+     </div>
+
+    </div> 
+
+  </div>  
+  
+
+  <script>
+$('#datepicker').datepicker({
+format: "yyyy-mm-dd"
+});
+$('#datepickerSearch').datepicker({
+format: "yyyy-mm-dd"
+});
+  </script>
+ </body>
+</html>
+
